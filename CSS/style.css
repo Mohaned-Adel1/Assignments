@@ -1,0 +1,12 @@
+.content-text h1 {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.content-text button {
+  width: 250px;
+  height: 80px;
+  background-color: blue;
+  color: white;
+}
