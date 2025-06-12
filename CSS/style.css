@@ -1,12 +1,50 @@
-.content-text h1 {
-  font-size: 80px;
-  font-weight: 700;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+.pageTitle {
+  position: relative;
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  color: #352e28;
+  line-height: 60px;
+  font-size: 50px;
+}
+.pageTitle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  left: 0px;
+  bottom: 10px;
+  background-color: rgb(254, 194, 96);
+  z-index: -1;
+  transition: height 350ms;
 }
 
-.content-text button {
-  width: 250px;
-  height: 80px;
-  background-color: blue;
+.pageTitle:hover::before {
+  height: 50%;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.page-content h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-content {
+  border-width: 2px 0 2px 0;
+  border-style: dotted;
+  border-color: #352e28;
+}
+.submit-btn {
+  background-color: #d1512d;
+  color: white;
+}
+.submit-btn:hover {
+  background-color: #bb4120;
   color: white;
 }

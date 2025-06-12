@@ -3,21 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes App</title>
+    <title>Bookmark</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/all.min.css" />
     <link href="./CSS/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="content-text text-center fw-bolder mt-5">
-        <h1>Quote of the Day</h1>
-        <p class="m-5 fs-1 fw-normal">
-          Press the button below to recieve a random quote!
-        </p>
-        <button onclick="genQuote();">New Quote</button>
-        <p id="quote" class="m-5 fs-3"></p>
-        <p id="author" class="m-5 fs-3"></p>
+  <body style="background-color: #f7ecde">
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center"
+    >
+      <h1 class="pageTitle m-5">Bookmarker</h1>
+
+      <div
+        class="page-content w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+      >
+        <h2>
+          <i class="fa-solid fa-bookmark"></i>
+          bookmark Your Favoriite Sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="w-100 d-flex flex-column justify-content-center">
+          <label for="siteName" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name
+          </label>
+          <input
+            type="text"
+            placeholder="Bookmark Name"
+            class="form-control"
+            id="siteName"
+            value=""
+          />
+        </div>
+        <div class="w-100 d-flex flex-column justify-content-center">
+          <label for="siteURL" class="pb-2 fw-semibold">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL
+          </label>
+          <input
+            type="url"
+            placeholder="Website URL"
+            class="form-control"
+            id="siteURL"
+            value=""
+          />
+        </div>
+        <button class="btn submit-btn px-5" onclick="addWebsite()">
+          Submit
+        </button>
       </div>
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+        </thead>
+        <tbody id="webSitesData"></tbody>
+      </table>
     </div>
 
     <script src="./JS/main.js"></script>
