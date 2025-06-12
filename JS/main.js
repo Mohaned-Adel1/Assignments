@@ -56,6 +56,8 @@ function bookmarkSync(listOfBookmarks) {
   webSitesData.innerHTML = siteHTML;
 }
 function visitURL(url) {
-  console.log(url);
-  window.open(url, "_blank");
+  if (url.startsWith("https://")) {
+    window.open(url, "_blank");
+  }
+  window.open("https://" + url, "_blank");
 }
