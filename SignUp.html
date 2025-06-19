@@ -14,46 +14,59 @@
   </head>
   <body>
     <div class="container">
-      <div class="p-5 shadow-lg m-5 text-center content-box">
+      <form class="p-5 shadow-lg m-5 text-center content-box" id="form">
         <h1>Smart Login System</h1>
+
         <div class="mb-3 input-control">
-          <label for="loginEmail" class="form-label"></label>
+          <label for="userName" class="form-label"></label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            placeholder="Enter Your Email"
-            id="loginEmail"
-            name="loginEmail"
+            id="userName"
+            name="userName"
+            placeholder="Enter Your Name "
           />
           <div class="error"></div>
         </div>
         <div class="mb-3 input-control">
-          <label for="loginPassword" class="form-label"></label>
+          <label for="userEmail" class="form-label"></label>
+          <input
+            type="email"
+            class="form-control"
+            id="userEmail"
+            name="userEmail"
+            placeholder="Enter Your Email "
+          />
+          <div class="error"></div>
+        </div>
+        <div class="mb-3 input-control">
+          <label for="userPassword" class="form-label"></label>
           <input
             type="password"
-            class="form-control"
             placeholder="Enter Your Password"
-            id="loginPassword"
-            name="loginPassword"
+            class="form-control"
+            id="userPassword"
+            name="userPassword"
           />
           <div class="error"></div>
         </div>
 
         <button
-          onclick="login(event)"
+          onclick="signUp(event)"
           type="submit"
           class="btn btn-primary w-100"
         >
-          Login
+          Sign Up
         </button>
-        <div class="text-center pt-3 pages-link">
+        <div class="text-center pt-4 pages-link">
           <p class="text-white">
-            Don’t have an account? <a href="./SignUp.html">Sign Up</a>
+            You have an account?
+            <a href="./index.html">Login</a>
           </p>
         </div>
-      </div>
+      </form>
     </div>
 
-    <script src="./JS/login.js"></script>
+    <script src="./JS/signUp.js"></script>
   </body>
 </html>
